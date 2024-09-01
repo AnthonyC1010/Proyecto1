@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tienda de Compras 2024</h1>
+        <h2>Desarrollado por Anthony Carrera</h2>
+        <button onclick="window.location.href='carrito.html'">Mi Carrito</button>
+    </header>
+    <section id="productos">
+        <div class="product" draggable="true" ondragstart="drag(event)" data-id="1">
+            <img src="imagenes/img1.jpg" alt="Huevos">
+            <p>Huevos - Q30</p>
+        </div>
+        <div class="product" draggable="true" ondragstart="drag(event)" data-id="2">
+            <img src="imagenes/img2.jpg" alt="Leche">
+            <p>Leche - Q15</p>
+        </div>
+        <div class="product" draggable="true" ondragstart="drag(event)" data-id="3">
+            <img src="imagenes/img3.jpg" alt="Pan">
+            <p>Pan - Q5</p>
+        </div>
+        <div class="product" draggable="true" ondragstart="drag(event)" data-id="4">
+            <img src="imagenes/img4.jpg" alt="Cereal">
+            <p>Cereal - Q25</p>
+        </div>
+        <div class="product" draggable="true" ondragstart="drag(event)" data-id="5">
+            <img src="imagenes/img5.jpg" alt="Pollo">
+            <p>Pollo - Q13</p>
+        </div>
+    </section>
+    <section id="carrito" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h2>Carrito de Compras</h2>
+        <div id="carrito-imagen">
+            <img src="imagenes/img6.jpg" alt="Carrito">
+        </div>
+        <div id="carrito-content">
+            <!-- Contenido del carrito actualizado dinámicamente -->
+        </div>
+    </section>
+    <button id="continuar-compra" style="display: none;" onclick="window.location.href='carrito.html'">Continuar</button>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
